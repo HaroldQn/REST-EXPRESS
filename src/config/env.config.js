@@ -1,12 +1,7 @@
-import fs from 'fs';
-import path from 'path';
+import dotenv from 'dotenv';
 
-// We check if you have the .env
-// const envPath = path.resolve(process.cwd(), '.env');
-// fs.existsSync(envPath) && process.loadEnvFile(envPath);
+dotenv.config();
 
-// Loanding environment variables...
-process.loadEnvFile();
 const { 
   NAME_USER: name_user_db = 'root',
   PASS_USER: pass_user_db = '',
