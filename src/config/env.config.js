@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 
 dotenv.config();
-
+console.log("ENV Variables:", process.env);
 const { 
   HOST_DB: host_db = 'localhost',
   PORT_DB: port_db = 3306,
