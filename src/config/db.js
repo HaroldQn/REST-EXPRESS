@@ -2,7 +2,7 @@ import { createPool } from 'mysql2/promise';
 import { EnvConfig } from './env.config.js';
 
 export const pool = createPool({
-  host: 'localhost',
+  host: EnvConfig().host_db,
   user: EnvConfig().name_user_db,
   port : 3306,
   password: EnvConfig().pass_user_db,
