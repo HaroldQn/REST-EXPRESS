@@ -6,5 +6,5 @@ export const pool = createPool({
   user: EnvConfig().name_user_db,
   port : 3306,
   password: EnvConfig().pass_user_db,
-  database: EnvConfig().name_db,
+  database: EnvConfig().name_db
 });
