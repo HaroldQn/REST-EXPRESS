@@ -8,3 +8,13 @@ export const pool = createPool({
   password: EnvConfig().pass_user_db,
   database: EnvConfig().name_db
 });
+
+(async () => {
+  try {
+    const connection = await pool.getConnection();
+    console.log('✅ Conexión a la base de datos exitosa');
+    connection.release();
+  } catch (error) {
+    console.error('❌ Error al conectar con la base de datos:', error.message);
+  }
+})();
