@@ -1,7 +1,6 @@
 import dotenv from 'dotenv';
 
 dotenv.config();
-console.log("ENV Variables:", process.env);
 const { 
   HOST_DB: host_db = 'localhost',
   PORT_DB: port_db = 3306,
@@ -9,7 +8,6 @@ const {
   PASSWORD_DB: pass_user_db = '',
   NAME_DB: name_db = 'companydb',
 } = process.env;
-console.log(host_db, port_db, name_user_db, pass_user_db, name_db);
 
 export const EnvConfig = () => ({
   name_user_db,
