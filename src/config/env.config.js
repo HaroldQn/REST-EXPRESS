@@ -2,10 +2,11 @@ import fs from 'fs';
 import path from 'path';
 
 // We check if you have the .env
-const envPath = path.resolve(process.cwd(), '.env');
-fs.existsSync(envPath) && process.loadEnvFile(envPath);
+// const envPath = path.resolve(process.cwd(), '.env');
+// fs.existsSync(envPath) && process.loadEnvFile(envPath);
 
 // Loanding environment variables...
+process.loadEnvFile();
 const { 
   NAME_USER: name_user_db = 'root',
   PASS_USER: pass_user_db = '',
