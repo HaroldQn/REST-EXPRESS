@@ -1,6 +1,6 @@
 import { pool } from "../config/db.js";
 
-const tabla = "employees";
+const tabla = "employees_tb";
 export const getEmployees = async (req, res) => {
   try {
     const [result] = await pool.query(`SELECT * FROM ${tabla}`);
